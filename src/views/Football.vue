@@ -1,64 +1,151 @@
 <template>
-    <div class="hello">
-        <h1>{{ msg }}</h1>
-        <p>
-            For a guide and recipes on how to configure / customize this project,<br>
-            check out the
-            <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-        </p>
-        <h3>Installed CLI Plugins</h3>
-        <ul>
-            <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank"
-                   rel="noopener">babel</a></li>
-            <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank"
-                   rel="noopener">eslint</a></li>
-        </ul>
-        <h3>Essential Links</h3>
-        <ul>
-            <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-            <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-            <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-            <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-            <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-        </ul>
-        <h3>Ecosystem</h3>
-        <ul>
-            <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-            <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-            <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank"
-                   rel="noopener">vue-devtools</a></li>
-            <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-            <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-        </ul>
+    <div class="football">
+        <h1>Football</h1>
+
+        <div class="footballGrid">
+            <div class="table">
+                <div class="head">
+                    <div class="position">Pl.</div>
+                    <div class="name">Verein</div>
+                    <div class="games">Sp.</div>
+                    <div class="wins">S</div>
+                    <div class="draws">U</div>
+                    <div class="losses">N</div>
+                    <div class="goals">Tore</div>
+                    <div class="difference">Diff.</div>
+                    <div class="points">Pkt.</div>
+                </div>
+                <div class="body">
+                    <div class="team">
+                        <div class="position">1</div>
+                        <div class="name">Borussia Dortmund</div>
+                        <div class="games">1</div>
+                        <div class="wins">1</div>
+                        <div class="draws">0</div>
+                        <div class="losses">0</div>
+                        <div class="goals">5:1</div>
+                        <div class="difference">4</div>
+                        <div class="points">3</div>
+                    </div>
+                    <div class="team">
+                        <div class="position">2</div>
+                        <div class="name">RB Leipzig</div>
+                        <div class="games">1</div>
+                        <div class="wins">1</div>
+                        <div class="draws">0</div>
+                        <div class="losses">0</div>
+                        <div class="goals">4:0</div>
+                        <div class="difference">4</div>
+                        <div class="points">3</div>
+                    </div>
+                </div>
+            </div>
+            <div class="matchday">
+                B
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'Football',
-        props: {
-            msg: String
-        }
+        name: 'Football'
     }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    h3 {
-        margin: 40px 0 0;
+    .football {
+        display: flex;
+        flex-flow: column;
     }
 
-    ul {
-        list-style-type: none;
-        padding: 0;
+    .football .footballGrid {
+        display: flex;
+        justify-content: center;
     }
 
-    li {
-        display: inline-block;
-        margin: 0 10px;
+    .footballGrid > * {
+        border: solid 1px black;
     }
 
-    a {
-        color: #42b983;
+    .table {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .head {
+        display: flex;
+    }
+
+    .body {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .team {
+        display: flex;
+    }
+
+    .head > * {
+        text-align: left;
+        border: solid 1px green;
+        height: 24px;
+        line-height: 24px;
+        margin: auto;
+        font-size: 18px;
+    }
+
+    .team > * {
+        text-align: center;
+        border: solid 1px green;
+        height: 24px;
+        line-height: 24px;
+        margin: auto;
+        font-size: 14px;
+    }
+
+    .position {
+        width: 25px;
+        padding-right: 5px;
+    }
+
+    .name {
+        width: 200px;
+    }
+
+    .team .position {
+        text-align: right;
+    }
+
+    .team .name {
+        text-align: left;
+    }
+
+    .games {
+        width: 30px;
+    }
+
+    .wins {
+        width: 30px;
+    }
+
+    .draws {
+        width: 30px;
+    }
+
+    .losses {
+        width: 30px;
+    }
+
+    .goals {
+        width: 60px;
+    }
+
+    .difference {
+        width: 40px;
+    }
+
+    .points {
+        width: 30px;
     }
 </style>

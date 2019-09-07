@@ -11,6 +11,6 @@ new Vue({
     router: router,
     store: store,
     created() {
-        this.$store.dispatch('footballModule.js/initLeagues')
+        this.$store.dispatch('footballModule/initLeagues')
     }
 })

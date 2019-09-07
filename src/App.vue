@@ -9,21 +9,12 @@
             |
             <router-link to="/football" class="navlink">Football</router-link>
         </div>
-
-        <Home />
-
+        <router-view/>
     </div>
 </template>
 
 <script>
-    import Home from './views/Home'
 
-    export default {
-        name: 'app',
-        components: {
-            Home
-        }
-    }
 </script>
 
 <style>
